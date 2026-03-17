@@ -15,7 +15,7 @@ function gerarBrilho() {
         setTimeout(() => {
             brilho.remove();
         }, 1000);
-    }
+    } 
     
     // Mensagem de alerta legal
     alert("Obrigado por se preocupar com o planeta!");
