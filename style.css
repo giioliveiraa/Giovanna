@@ -1,0 +1,121 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e8f5e9; /* Verde bem clarinho de fundo */
+    overflow-x: hidden;
+}
+
+/* Menu no topo */
+header {
+    background-color: #1b5e20; /* Verde Escuro */
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Estilo dos Slides */
+.slide {
+    height: 100vh; /* Cada slide ocupa a tela toda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    border: 10px solid #2e7d32; /* Borda com desenho/cor de meio ambiente */
+    position: relative;
+}
+
+/* Títulos: Azul escuro, Negrito e Caixa Alta */
+h1, h2 {
+    color: #0d47a1; /* Azul Escuro */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+
+/* Texto Médio */
+p, li {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 600px;
+}
+
+/* Imagens dos slides */
+img {
+    max-width: 300px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+/* Lista sem bolinhas feias */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+/* Botão de interação */
+button {
+    padding: 10px 20px;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsividade: Ajustes para celular */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    img { max-width: 200px; }
+    nav ul { flex-wrap: wrap; }
+}
+
+/* Estilo do brilho azul (JS) */
+.brilho {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #4fc3f7;
+    box-shadow: 0 0 10px #0d47a1;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sumir 1s linear forwards;
+}
+
+@keyframes sumir {
+    to { transform: translateY(-100px); opacity: 0; }
+}
